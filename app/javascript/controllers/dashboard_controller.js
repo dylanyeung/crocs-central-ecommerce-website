@@ -1,5 +1,5 @@
-import { Controller } from "@hotwired/stimulus"
-import { Chart, registerables } from 'chart.js'
+import { Controller } from "@hotwired/stimulus";
+import { Chart, registerables } from 'chart.js';
 
 Chart.register(...registerables)
 
@@ -48,6 +48,5 @@ export default class extends Controller {
         }
       }
     })
-
   }
 }
