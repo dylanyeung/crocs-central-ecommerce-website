@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
+    "bulma": "^1.0.2",
     "chart.js": "^4.4.4"
   }
 }

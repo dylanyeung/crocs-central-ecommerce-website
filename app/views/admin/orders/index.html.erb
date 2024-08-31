@@ -3,8 +3,6 @@
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <% content_for :title, "Orders" %>
-
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Orders</h1>
     <%= link_to "New order", new_admin_order_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
@@ -51,11 +49,11 @@
               <% end %>
             </tbody>
           </table>
+          <%== pagy_nav(@not_fulfilled_pagy) if @not_fulfilled_pagy.pages > 1 %>
         </div>
       </div>
     </div>
   </div>
-
 
   <h2>Fulfilled Orders</h2>
   <div class="flex flex-col w-full">
@@ -98,6 +96,7 @@
               <% end %>
             </tbody>
           </table>
+          <%== pagy_nav(@fulfilled_pagy) if @fulfilled_pagy.pages > 1 %>
         </div>
       </div>
     </div>
