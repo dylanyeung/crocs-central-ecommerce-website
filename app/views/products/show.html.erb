@@ -6,7 +6,7 @@
   </div>
   <div data-controller="products" data-products-product-value="<%= @product.to_json %>" class="flex flex-col items-center justify-center max-w-sm rounded-lg shadow-lg p-10 bg-white">
     <h1 class="font-bold text-4xl uppercase"><%= @product.name %></h1>
-    <p class="text-2xl mt-4">$<%= (@product.price/100.0).to_s %></p>
+    <p class="text-2xl mt-4">$<%= format('%.2f', @product.price / 100.0) %></p>
     <p class="text-md py-8"><%= @product.description %></p>
     <div class="my-8">
       <p class='uppercase text-lg'>Size</p>
