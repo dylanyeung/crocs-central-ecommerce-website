@@ -1,38 +1,33 @@
-<%= form_with(model: [:admin, admin_product], class: "contents") do |form| %>
-  <% if admin_product.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(admin_product.errors.count, "error") %> prohibited this product from being saved:</h2>
-      <ul>
-        <% admin_product.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_with(model: [:admin, admin_product], class: "contents", html: { id: 'productForm' }) do |form| %>
   <div class="my-5">
     <%= form.label :name %>
-    <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", data: { error_target: "name" }, required: true %>
+    <div id="error_name" class="text-red-500 text-sm mt-1"></div>
   </div>
   <div class="my-5">
     <%= form.label :description %>
-    <%= form.text_area :description, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_area :description, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", data: { error_target: "description" }, required: true %>
+    <div id="error_description" class="text-red-500 text-sm mt-1"></div>
   </div>
   <div class="my-5">
     <% if admin_product.images.attached? %>
       <% admin_product.images.each do |image| %>
-        <%= image_tag image, class: "w-20 h-20 object-cover rounded-md" %>
+        <%= image_tag image.variant(:thumb), class: "w-20 h-20 object-cover rounded-md" %>
       <% end %>
     <% end %>
     <%= form.label :images %>
-    <%= form.file_field :images, multiple: true, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.file_field :images, multiple: true, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", data: { error_target: "images" }, required: true %>
+    <div id="error_images" class="text-red-500 text-sm mt-1"></div>
   </div>
   <div class="my-5">
     <%= form.label :price %>
-    <%= form.number_field :price, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.number_field :price, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", step: "0.01", min: "0", data: { error_target: "price" }, required: true %>
+    <div id="error_price" class="text-red-500 text-sm mt-1"></div>
   </div>
   <div class="my-5">
     <%= form.label :category_id %>
-    <%= form.collection_select :category_id, Category.order(:name), :id, :name, id: "category", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.collection_select :category_id, Category.order(:name), :id, :name, id: "category", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", data: { error_target: "category" }, required: true %>
+    <div id="error_category" class="text-red-500 text-sm mt-1"></div>
   </div>
   <div class="my-5">
     <%= form.label :active %>
@@ -46,4 +41,63 @@
   <div class="inline">
     <%= form.submit class: "rounded-lg py-3 px-5 bg-coolMint text-white inline-block font-bold cursor-pointer" %>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('productForm');
+      const errorElements = {
+        name: document.getElementById('error_name'),
+        description: document.getElementById('error_description'),
+        images: document.getElementById('error_images'),
+        price: document.getElementById('error_price'),
+        category: document.getElementById('error_category')
+      };
+
+      form.addEventListener('submit', function (event) {
+        let isValid = true;
+
+        // Clear previous error messages
+        Object.values(errorElements).forEach(el => el.textContent = '');
+
+        // Validate name
+        const nameField = form.querySelector('input[name="product[name]"]');
+        if (!nameField.value.trim()) {
+          isValid = false;
+          errorElements.name.textContent = 'Name cannot be blank.';
+        }
+
+        // Validate description
+        const descriptionField = form.querySelector('textarea[name="product[description]"]');
+        if (!descriptionField.value.trim()) {
+          isValid = false;
+          errorElements.description.textContent = 'Description cannot be blank.';
+        }
+
+        // Validate images
+        const imagesField = form.querySelector('input[name="product[images][]"]');
+        if (!imagesField.files.length) {
+          isValid = false;
+          errorElements.images.textContent = 'Please upload at least one image.';
+        }
+
+        // Validate price
+        const priceField = form.querySelector('input[name="product[price]"]');
+        const priceValue = parseFloat(priceField.value);
+        if (isNaN(priceValue) || priceValue <= 0) {
+          isValid = false;
+          errorElements.price.textContent = 'Please enter a valid price greater than 0.';
+        }
+
+        // Validate category
+        const categoryField = form.querySelector('select[name="product[category_id]"]');
+        if (!categoryField.value) {
+          isValid = false;
+          errorElements.category.textContent = 'Please select a category.';
+        }
+
+        if (!isValid) {
+          event.preventDefault(); // Prevent form submission if not valid
+        }
+      });
+    });
+  </script>
 <% end %>
