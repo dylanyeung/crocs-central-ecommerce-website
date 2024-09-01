@@ -1,10 +1,10 @@
-<footer class="bg-gray-800 text-gray-100">
+<footer class="bg-gray-800 text-white">
   <div class="max-w-6xl mx-auto px-4 py-10 md:py-20">
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
       <!-- About section -->
       <div class="space-y-8 xl:col-span-1">
-        <h3 class="text-sm font-semibold text-coolMint tracking-wider uppercase">About Crocs Central</h3>
-        <p class="text-gray-300 leading-6">
+        <h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase">About Crocs Central</h3>
+        <p class="text-white leading-6">
           Crocs Central is your premier destination for everything Crocs! We’re passionate about bringing you the best selection of Crocs footwear, from timeless classics to the latest styles. Our mission is to provide comfort, quality, and style for every step of your journey. Whether you're looking for everyday comfort, outdoor adventure, or a splash of color, we've got you covered. Join our community of Crocs lovers and step into a world of endless possibilities!
         </p>
       </div>
@@ -13,10 +13,10 @@
       <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
-            <h3 class="text-sm font-semibold text-coolMint tracking-wider uppercase">Quick Links</h3>
+            <h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase">Quick Links</h3>
             <ul class="mt-4 space-y-4">
               <li>
-                <%= link_to "Home", root_path, class: "text-base leading-6 text-gray-300 hover:text-coolMint" %>
+                <%= link_to "Home", root_path, class: "text-base leading-6 text-white hover:text-gray-100" %>
               </li>
             </ul>
           </div>
@@ -26,36 +26,37 @@
       <!-- Contact information -->
       <div class="mt-8 mb-8 md:grid md:grid-cols-2 md:gap-8">
         <div>
-          <h3 class="text-sm font-semibold tracking-wider uppercase text-coolMint">
+          <h3 class="text-sm font-semibold tracking-wider uppercase text-gray-200">
             Contact
           </h3>
           <ul class="mt-4 space-y-4">
             <li>
-              <p class="text-base leading-6 text-gray-300">
+              <p class="text-base leading-6 text-white">
                 123 Crocs Road <br>
                 Crocs City, CC 12345
               </p>
             </li>
             <li>
-              <p class="text-base leading-6 text-gray-300">
+              <p class="text-base leading-6 text-white">
                 Email: support@crocscentral.com
               </p>
             </li>
             <li>
-              <p class="text-base leading-6 text-gray-300">
-                Phone: (123) 456-7890
+              <p class="text-base leading-6 text-white">
+                Phone: (123)-456-7890
               </p>
             </li>
           </ul>
         </div>
       </div>
+    </div>
 
-      <div class="border-t border-coolMint">
-        <div class="max-w-6xl mx-auto px-4 py-6 md:flex md:items-center md:justify-between">
-          <p class="mt-6 text-base leading-6 text-gray-400 md:mt-0 md:order-1">
-            &copy; <%= Time.now.year %> Crocs Central, Inc. All rights reserved.
-          </p>
-        </div>
+    <!-- Footer bottom -->
+    <div class="border-t border-gray-700 mt-8">
+      <div class="max-w-6xl mx-auto px-4 py-6">
+        <p class="text-base leading-6 text-gray-400 text-center">
+          &copy; <%= Time.now.year %> Crocs Central, Inc. All rights reserved.
+        </p>
       </div>
     </div>
   </div>

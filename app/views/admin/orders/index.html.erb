@@ -4,7 +4,7 @@
   <% end %>
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Orders</h1>
-    <%= link_to "New order", new_admin_order_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <%= link_to "New order", new_admin_order_path, class: "rounded-lg py-3 px-5 bg-coolMint text-white block font-bold" %>
   </div>
   <h2>Unfulfilled Orders</h2>
   <div class="flex flex-col w-full">
@@ -12,7 +12,7 @@
       <div class="py-2 inline-block min-w-full">
         <div class="overlow-x-auto">
           <table class="min-w-full overflow-x-scroll">
-            <thead class="bg-white border-b">
+            <thead class="border-b" style="background-color: rgba(161, 230, 219, 0.3);">
               <tr>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 py-4 text-left">
                   Order ID
@@ -32,7 +32,7 @@
               <% @not_fulfilled_orders.each do |o| %>
                 <tr class="bg-gray-50 border-b">
                   <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800 underline">
-                    <%= link_to o.id, [:admin, o], class: 'underline'%>
+                    <%= link_to o.id, [:admin, o], class: 'underline' %>
                   </td>
                   <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800">
                     <%= o.customer_email %>
@@ -41,7 +41,7 @@
                     <%= o.address %>
                   </td>
                   <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800">
-                    $<%= sprintf('%.2f', o.total / 100.0) %>
+                    <%= o.total %>
                   </td>
                 </tr>
               <% end %>
@@ -78,7 +78,7 @@
               <% @fulfilled_orders.each do |o| %>
                 <tr class="bg-gray-50 border-b">
                   <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800 underline">
-                    <%= link_to o.id, [:admin, o], class: 'underline'%>
+                    <%= link_to o.id, [:admin, o], class: 'underline' %>
                   </td>
                   <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800">
                     <%= o.customer_email %>

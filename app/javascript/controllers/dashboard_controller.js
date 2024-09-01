@@ -8,10 +8,10 @@ export default class extends Controller {
   static values = { revenue: Array }
 
   initialize() {
-    const data = this.revenueValue.map((item) => item[1]/100.0)
-    const labels = this.revenueValue.map((item) => item[0])
+    const data = this.revenueValue.map((item) => item[1] / 100.0);
+    const labels = this.revenueValue.map((item) => item[0]);
 
-    const ctx = document.getElementById('revenueChart')
+    const ctx = document.getElementById('revenueChart');
 
     new Chart(ctx, {
       type: 'line',
@@ -21,6 +21,8 @@ export default class extends Controller {
           label: 'Revenue $',
           data: data,
           borderWidth: 3,
+          borderColor: "rgb(161, 230, 219)", // Cool mint color for the line
+          backgroundColor: "rgba(161, 230, 219, 0.3)", // Lighter cool mint shade for the fill
           fill: true
         }]
       },
@@ -47,6 +49,6 @@ export default class extends Controller {
           }
         }
       }
-    })
+    });
   }
 }
