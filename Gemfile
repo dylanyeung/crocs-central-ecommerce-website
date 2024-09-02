@@ -67,3 +67,5 @@ gem "stripe", "~> 12.5"
 gem "pagy", "~> 9.0.8"
 
 gem "htmlbeautifier"
+
+gem "aws-sdk-s3", require: false
