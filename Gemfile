@@ -68,4 +68,8 @@ gem "pagy", "~> 9.0.8"
 
 gem "htmlbeautifier"
 
+<<<<<<< HEAD
 gem "aws-sdk-s3", require: false
+=======
+gem "aws-sdk-s3"
+>>>>>>> ccdff2b57ffe5a38604efcaf6053551e0fe12074
