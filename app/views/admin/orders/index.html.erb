@@ -41,7 +41,7 @@
                     <%= o.address %>
                   </td>
                   <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800">
-                    <%= o.total %>
+                    $<%= sprintf('%.2f', o.total / 100.0) %>
                   </td>
                 </tr>
               <% end %>
