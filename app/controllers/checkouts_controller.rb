@@ -30,8 +30,8 @@ class CheckoutsController < ApplicationController
     session = Stripe::Checkout::Session.create(
       mode: "payment",
       line_items: line_items,
-      success_url: success,
-      cancel_url: cancel,
+      success_url: "https://crocscentral.onrender.com/success",
+      cancel_url: "https://crocscentral.onrender.com/cancel",
       shipping_address_collection: {
         allowed_countries: [ "US", "CA" ]
       }
@@ -41,10 +41,10 @@ class CheckoutsController < ApplicationController
   end
 
   def success
-    url_for(controller: "checkouts", action: "success", only_path: true)
+    render :success
   end
 
   def cancel
-    url_for(controller: "checkouts", action: "cancel", only_path: true)
+    render :cancel
   end
 end
