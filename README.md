@@ -33,7 +33,7 @@ A scalable and secure fullstack e-commerce platform built with modern web techno
 ### Customer-Facing Storefront
 
 **Home Page Overview**  
-The home page features a comprehensive layout with a navigation bar, a welcoming banner, and images showcasing different product categories. The navigation bar provides links to the products page, admin dashboard, and shopping cart, ensuring smooth navigation across the site. The banner welcomes users and sets the tone, while the product categories section helps users easily explore various offerings.
+The home page features a comprehensive layout with a navigation bar, a welcome banner, and images showcasing different product categories. The navigation bar provides links to the products page, admin dashboard, and shopping cart, ensuring smooth navigation across the site. The banner welcomes users and sets the tone, while the product categories section helps users easily explore various offerings.
 
 ![Navbar, Welcome Banner, and Product Categories](https://raw.githubusercontent.com/dyeung2/ecom-platform/main/app/assets/images/home-top.png)
 
@@ -45,7 +45,7 @@ Select sizes and add items to a persistent, local storage-based cart.
 ![Shopping Cart](https://raw.githubusercontent.com/dyeung2/ecom-platform/main/app/assets/images/cart-page.png)
 
 **Secure Checkout**  
-Integrated with Stripe for secure payment processing and smooth checkout experience.
+Integrated with Stripe API for secure payment processing and smooth checkout experience.
 
 ![Stripe Checkout](https://raw.githubusercontent.com/dyeung2/ecom-platform/main/app/assets/images/stripe-checkout.png)  
 ![Checkout Success](https://raw.githubusercontent.com/dyeung2/ecom-platform/main/app/assets/images/checkout-success.png)
@@ -56,12 +56,12 @@ Orders are created upon successful payment, with real-time status updates for fu
 ![Order Management Page](https://raw.githubusercontent.com/dyeung2/ecom-platform/main/app/assets/images/orders.png)
 
 **Customer Testimonials**  
-Showcases customer reviews to enhance trust and engagement with the brand.
+Showcases customer reviews.
 
 ![Testimonials Screenshot](https://raw.githubusercontent.com/dyeung2/ecom-platform/main/app/assets/images/home-mid.png)
 
 **Newsletter Subscription and Footer**  
-The footer includes a description of Crocs Central, quick navigation links, and contact details for customer support. Above the footer, there's a section to subscribe to the newsletter for exclusive deals and updates.
+The footer includes a description of Crocs Central, quick navigation links, and contact details for customer support. Above the footer, there's a section to subscribe to a newsletter.
 
 ![Newsletter Subscription and Footer](https://raw.githubusercontent.com/dyeung2/ecom-platform/main/app/assets/images/home-bottom.png)
 
@@ -85,7 +85,7 @@ Manage products with CRUD operations, image uploads, dynamic form validation, an
 ![Stock Created Successfully](https://raw.githubusercontent.com/dyeung2/ecom-platform/main/app/assets/images/stock-created.png)
 
 **Enhanced User Experience**  
-Product search and pagination for efficient data handling.
+Product search for efficient data handling.
 
 ![Product Search](https://raw.githubusercontent.com/dyeung2/ecom-platform/main/app/assets/images/product-search.png)  
 ![Product Page](https://raw.githubusercontent.com/dyeung2/ecom-platform/main/app/assets/images/products-page.png)
