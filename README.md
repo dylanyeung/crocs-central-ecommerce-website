@@ -2,6 +2,17 @@
 
 A scalable and secure fullstack e-commerce platform built with modern web technologies, offering a seamless shopping experience for customers and a powerful administrative interface for product management. This project demonstrates expertise in full-stack development with a focus on performance, security, and cloud integration.
 
+# Table of Contents
+
+- [Fullstack E-Commerce Application](#fullstack-e-commerce-application)
+- [Technology Stack](#technology-stack)
+- [AWS and Image Hosting](#aws-and-image-hosting)
+- [Deployment and Hosting](#deployment-and-hosting)
+- [Key Technical Highlights](#key-technical-highlights)
+- [Features](#features)
+- [Admin Dashboard for Product Management](#admin-dashboard-for-product-management)
+- [Conclusion](#conclusion)
+
 ## Technology Stack
 
 - **Backend**: Ruby on Rails 7
