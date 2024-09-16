@@ -4,7 +4,6 @@ A scalable and secure fullstack e-commerce platform built with modern web techno
 
 # Table of Contents
 
-- [Fullstack E-Commerce Application](#fullstack-e-commerce-application)
 - [Technology Stack](#technology-stack)
 - [AWS and Image Hosting](#aws-and-image-hosting)
 - [Deployment and Hosting](#deployment-and-hosting)
