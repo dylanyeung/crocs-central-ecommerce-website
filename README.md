@@ -1,6 +1,6 @@
 # Fullstack E-Commerce Application
 
-A scalable and secure fullstack e-commerce platform built with modern web technologies, offering a seamless shopping experience for customers and a powerful administrative interface for product management. This project demonstrates expertise in full-stack development with a focus on performance, security, and cloud integration.
+A scalable and secure fullstack e-commerce platform built with modern web technologies like Ruby on Rails, Hotwire, AWS S3, and Stripe, offering a seamless shopping experience for customers and a powerful administrative interface for product management.
 
 # Table of Contents
 
@@ -11,7 +11,6 @@ A scalable and secure fullstack e-commerce platform built with modern web techno
 - [Features](#features)
 - [Admin Dashboard for Product Management](#admin-dashboard-for-product-management)
 - [Contact Information](#contact-information)
-- [Conclusion](#conclusion)
 
 ## Technology Stack
 
@@ -106,7 +105,3 @@ For any inquiries or professional connections, please reach out through:
 - **Email:** [dylanyeung.dev@gmail.com](mailto:dylanyeung.dev@gmail.com)
 - **LinkedIn:** [LinkedIn.com/in/dylanyeung](https://www.linkedin.com/in/dylanyeung)
 - **GitHub:** [Github.com/dylanyeung](https://github.com/dylanyeung)
-
-## Conclusion
-
-This e-commerce platform showcases my skills in building robust, scalable web applications using modern technologies like Ruby on Rails, Hotwire, AWS S3, and Stripe. It highlights my proficiency in full-stack development, cloud integration, and creating user-focused, secure, and performant web applications.
