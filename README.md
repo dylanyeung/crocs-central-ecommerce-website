@@ -10,6 +10,7 @@ A scalable and secure fullstack e-commerce platform built with modern web techno
 - [Key Technical Highlights](#key-technical-highlights)
 - [Features](#features)
 - [Admin Dashboard for Product Management](#admin-dashboard-for-product-management)
+- [Contact Information](#contact-information)
 - [Conclusion](#conclusion)
 
 ## Technology Stack
@@ -99,6 +100,12 @@ Product search for efficient data handling.
 
 ![Product Search](https://raw.githubusercontent.com/dylanyeung/crocs-central/main/app/assets/images/product-search.png)  
 ![Product Page](https://raw.githubusercontent.com/dylanyeung/crocs-central/main/app/assets/images/products-page.png)
+
+## Contact Information
+For any inquiries or professional connections, please reach out through:
+- **Email:** [dylanyeung.dev@gmail.com](mailto:dylanyeung.dev@gmail.com)
+- **LinkedIn:** [LinkedIn.com/in/dylanyeung](https://www.linkedin.com/in/dylanyeung)
+- **GitHub:** [Github.com/dylanyeung](https://github.com/dylanyeung)
 
 ## Conclusion
 
