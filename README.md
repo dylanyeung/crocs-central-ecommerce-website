@@ -20,6 +20,7 @@ A scalable and secure fullstack e-commerce platform built with modern web techno
 - **Payments**: Stripe API for secure transactions
 - **Realtime Updates**: Hotwire with Turbo and Stimulus for dynamic user interfaces
 - **Authentication**: Devise for user and admin security
+- **Cloud Storage: AWS S3 for scalable and durable object storage, ensuring efficient management and delivery of image assets.
 
 ## AWS and Image Hosting
 
